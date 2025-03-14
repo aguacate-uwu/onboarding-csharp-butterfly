@@ -28,11 +28,11 @@ docker compose up -d
 📌 **Nota:** La primera vez que inicies los servicios, puede tardar un rato.
 
 ### 3️⃣ Verificar que los contenedores están corriendo
-Comprueba el estado de los contenedores con:
+Comprueba el estado del contenedor con:
 ```bash
 docker ps
 ```
-Deberías ver un contenedores en ejecución: **postgres-db**.
+Deberías ver un contenedor en ejecución: **postgres-db**.
 
 ### 4️⃣ Instalación de .NET 9
 Ejecuta los siguiente comandos en orden en tu terminal:
@@ -62,11 +62,11 @@ Si no funciona, asegurate de tener levantado y funcionando correctamente los con
 ## 🔄 Detener y Reiniciar los Contenedores
 Si deseas detener los contenedores en ejecución:
 ```bash
-docker-compose down
+docker compose down
 ```
 Para volver a iniciarlos:
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ---
