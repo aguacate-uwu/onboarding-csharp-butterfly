@@ -23,7 +23,7 @@ cd Onboarding-CSharp
 ### 2️⃣ Levantar los contenedores
 Para iniciar los servicios en segundo plano, ejecuta:
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 📌 **Nota:** La primera vez que inicies los servicios, puede tardar un rato.
 
