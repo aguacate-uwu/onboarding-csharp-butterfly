@@ -16,8 +16,8 @@ Antes de comenzar, asegúrate de tener instalados en tu sistema:
 ### 1️⃣ Clonar el repositorio
 Ejecuta el siguiente comando para clonar el proyecto:
 ```bash
-git clone git@github.com:campus-CodeArts/Onboarding-CSharp.git
-cd Onboarding-CSharp
+git clone git@github.com:campus-CodeArts/onboarding-csharp-extra.git
+cd onboarding-csharp-extra
 ```
 
 ### 2️⃣ Levantar los contenedores
@@ -74,7 +74,7 @@ docker compose up -d
 ## 🧹 Eliminar los Contenedores y Datos Persistentes
 Si quieres eliminar los contenedores junto con los volúmenes y datos almacenados:
 ```bash
-docker-compose down -v
+docker compose down -v
 ```
 ⚠️ **Advertencia:** Esto eliminará todos los datos almacenados en la base de datos PostgreSQL.
 
@@ -83,7 +83,7 @@ docker-compose down -v
 ## 🎯 Notas Finales
 - Para ver los registros en tiempo real:
   ```bash
-  docker-compose logs -f
+  docker compose logs -f
   ```
 
 Para más información sobre **C#** consulta su documentación oficiales.
