@@ -4,12 +4,20 @@ CREATE TABLE IF NOT EXISTS payments (
     paymentamount DECIMAL(10,2) NOT NULL,
     paymentcompleted BOOLEAN DEFAULT FALSE,
     paymentdue DATE NOT NULL
+    user_id INTEGER REFERENCES usuarios(id)
 );
 
 CREATE TABLE IF NOT EXISTS bankaccount (
     accountid SERIAL PRIMARY KEY,
     accountname VARCHAR(20) UNIQUE NOT NULL,
     accountbalance DECIMAL(10,2) NOT NULL DEFAULT 0
+    user_id INTEGER REFERENCES usuarios(id)
+);
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL
 );
 
 INSERT INTO payments (paymentdescription, paymentamount, paymentcompleted, paymentdue) VALUES
@@ -24,3 +32,6 @@ INSERT INTO payments (paymentdescription, paymentamount, paymentcompleted, payme
 INSERT INTO bankaccount (accountname, accountbalance) VALUES
     ('Checking', 2000.00),
     ('Savings', 6000.00);
+
+INSERT INTO usuarios (username, password_hash) VALUES
+    ('admin', 'admin');
